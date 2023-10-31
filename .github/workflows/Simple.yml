@@ -1,0 +1,23 @@
+name: SimplePipline
+
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  lintTest:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: action/checkout@v2
+      - name: Install Dependencies
+        run: |
+          echo "Running Insatalling Dependencies..."
+          npm install
+      - name: Run Linting
+        run: |
+          echo "Runing Linting tests"
+          npm run lint
+        env:
+          CI: true
