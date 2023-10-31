@@ -1,14 +1,16 @@
 name: SimplePipline
+
 on:
   push:
     branches: [main]
+
 jobs:
   lintTest:
     name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Clone Repository
-        uses: action/checkout@main
+        uses: actions/checkout@v2
       - name: Install Dependencies
         run: |
           echo "Running Insatalling Dependencies..."
