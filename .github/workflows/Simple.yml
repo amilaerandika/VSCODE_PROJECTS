@@ -42,4 +42,4 @@ jobs:
       - name: Building App
         run: |
           echo "Running Build"
-          npm run build
+          npm run dev
