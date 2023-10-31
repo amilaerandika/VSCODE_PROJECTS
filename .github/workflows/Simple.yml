@@ -37,7 +37,7 @@ jobs:
   buildApp:
     name: Build App
     runs-on: ubuntu-latest
-    needs: [Lint]
+    needs: [lintTest]
     steps:
       - name: Building App
         run: |
