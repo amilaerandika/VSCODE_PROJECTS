@@ -34,11 +34,11 @@ jobs:
           sleep 5s;
           echo "Running Security Checks 2"
           sleep 5s;
-  deploy:
-    name: Deployment
+  buildApp:
+    name: Build App
     runs-on: ubuntu-latest
-    needs: [lintTest,SecurityCheck]
     steps:
-      - name: Install Dependencies
+      - name: Building App
         run: |
-          echo "Running Deployment"
+          echo "Running Build"
+          npm run build
