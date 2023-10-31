@@ -1,9 +1,7 @@
 name: SimplePipline
-
-on: 
+on:
   push:
     branches: [main]
-
 jobs:
   lintTest:
     name: Lint
